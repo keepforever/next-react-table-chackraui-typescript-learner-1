@@ -33,7 +33,6 @@ const MyGradientBox = ({ label }: HelperImageProps) => {
 
     const handleOnClick = (e: MyMouseEvent) => {
         e.preventDefault();
-        console.log('\n', '\n', `my mouse event = `, e.target.id, '\n', '\n');
         toast({
             title: 'Time for Toast.',
             description: "You're toast is done",
@@ -43,7 +42,6 @@ const MyGradientBox = ({ label }: HelperImageProps) => {
         });
     };
 
-    console.log('\n', '\n', `formik.values = `, formik.values, '\n', '\n');
     return (
         <>
             <Box width="xl">
