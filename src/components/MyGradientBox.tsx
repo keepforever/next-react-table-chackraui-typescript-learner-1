@@ -33,7 +33,7 @@ const MyGradientBox = ({ label }: HelperImageProps) => {
 
     const handleOnClick = (e: MyMouseEvent) => {
         e.preventDefault();
-        console.log('\n', '\n', `my mouse event = `, (e.target as any).id, '\n', '\n');
+        console.log('\n', '\n', `my mouse event = `, e.target.id, '\n', '\n');
         toast({
             title: 'Time for Toast.',
             description: "You're toast is done",
