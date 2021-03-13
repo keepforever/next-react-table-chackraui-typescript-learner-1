@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/react';
 import SomeText from '../components/SomeText';
 import SomeImage from '../components/SomeImage';
 import CTASection from '../components/CTASection';
+import MyGradientBox from '../components/MyGradientBox';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <SomeText />
             <SomeImage />
             <CTASection />
+            <MyGradientBox label="hello tool tip" />
         </Box>
     );
 };
