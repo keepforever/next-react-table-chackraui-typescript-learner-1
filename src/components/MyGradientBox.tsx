@@ -35,9 +35,9 @@ const MyGradientBox = ({ label }: HelperImageProps) => {
         e.preventDefault();
         console.log('\n', '\n', `my mouse event = `, (e.target as any).id, '\n', '\n');
         toast({
-            title: 'Account created.',
-            description: "We've created your account for you.",
-            status: 'success',
+            title: 'Time for Toast.',
+            description: "You're toast is done",
+            status: 'error',
             duration: 9000,
             isClosable: true
         });

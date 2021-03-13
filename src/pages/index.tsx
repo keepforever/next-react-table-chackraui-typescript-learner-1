@@ -8,8 +8,6 @@ import MyGradientBox from '../components/MyGradientBox';
 const Home = () => {
     return (
         <Box mb={8} w="full">
-            <SomeText />
-            <SomeImage />
             <CTASection />
             <MyGradientBox label="hello tool tip" />
         </Box>
