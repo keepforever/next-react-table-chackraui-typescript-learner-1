@@ -10,9 +10,8 @@ beforeEach(() => {
 test('counter increments and decrements when the buttons are clicked', () => {
     const div = document.createElement('div');
     document.body.append(div);
-
     ReactDOM.render(<Counter />, div);
-    console.log(document.body.innerHTML);
+    // console.log(document.body.innerHTML);
     const [decrement, increment] = div.querySelectorAll('button');
     const message = div.firstChild.querySelector('div');
 
