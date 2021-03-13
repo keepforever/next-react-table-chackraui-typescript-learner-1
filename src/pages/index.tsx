@@ -1,6 +1,7 @@
 import { Box, Heading } from '@chakra-ui/react';
 import CTASection from '../components/CTASection';
 import MyGradientBox from '../components/MyGradientBox';
+import AccessibleLink from '../components/AccessibleLink';
 
 // import SomeText from '../components/SomeText';
 // import SomeImage from '../components/SomeImage';
@@ -11,6 +12,7 @@ const Home = () => {
             <Heading as="h1">hello world</Heading>
             <CTASection />
             <MyGradientBox label="hello tool tip" />
+            <AccessibleLink href="/table">Table</AccessibleLink>
         </Box>
     );
 };
