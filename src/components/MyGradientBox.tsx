@@ -1,5 +1,7 @@
 import { MouseEvent } from 'react';
 import { Box, Tooltip, Button, useToast, Progress, Input } from '@chakra-ui/react';
+import { useFormik } from 'formik';
+import { string, object } from 'yup';
 
 type HelperImageProps = {
     label?: string;
@@ -9,8 +11,25 @@ interface MyMouseEvent extends MouseEvent {
     target: any;
 }
 
+const addSupportProfileValidationSchema = object().shape({
+    email: string().email().required('Email is required'),
+    password: string()
+});
+
+const initialFormikState = {
+    email: '',
+    password: ''
+};
+
 const MyGradientBox = ({ label }: HelperImageProps) => {
     const toast = useToast();
+    const formik = useFormik({
+        initialValues: initialFormikState,
+        onSubmit: () => {},
+        validationSchema: addSupportProfileValidationSchema,
+        validateOnBlur: true,
+        validateOnChange: false
+    });
 
     const handleOnClick = (e: MyMouseEvent) => {
         e.preventDefault();
@@ -23,10 +42,13 @@ const MyGradientBox = ({ label }: HelperImageProps) => {
             isClosable: true
         });
     };
+
+    console.log('\n', '\n', `formik.values = `, formik.values, '\n', '\n');
     return (
         <>
             <Box width="xl">
-                <Input placeholder="Basic usage" />
+                <Input id="email" placeholder="email" onChange={formik.handleChange} />
+                <Input id="password" placeholder="password" type="password" onChange={formik.handleChange} />
             </Box>
 
             <Box width="xl">
