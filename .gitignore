@@ -37,3 +37,6 @@ yarn-error.log*
 **/public/sw.js
 **/public/service-worker.js
 
+# vscode
+.vscode
+
